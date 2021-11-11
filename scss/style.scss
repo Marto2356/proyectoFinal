@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*MIXIN*/
+
+@mixin p{
+    font-family: 'Gochi Hand', cursive;
+    color: coral;
+    text-align: center;
+    font-size: 25px;
+    padding: 25px;
+    margin: 25px;
+}
+
+/*HEADER*/
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.punaHeader {
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: black;
+}
+.imagesIndex{
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    background-color: coral;
+    opacity: .5;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+.secciónNavegable {
+    font-family: 'Gochi Hand', cursive;
+    color: rgb(90, 43, 9);
+    text-decoration: none;
+    list-style: none; 
+    display: inline-block;  
+    padding: 20px;
+    transition: all 0.7s ease;  
+    border-radius: 10%;
+}
+.secciónNavegable:hover{
+    transform: scale(1.3,1.3);
+}
+.menu li a:hover {
+    background-color: chocolate;
+    color: white;
+}
+
+.fotosIndex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 45%;
+}
+
+.párrafo-index{
+    @include p;
+}
+
+    
+.contactoFont{
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 20px;
+}
+
+footer{
+    width: 100%;
+    background: #202020;
+    color: white;   
+    margin-top: 10vh;
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1{
+    max-width: 400px;
+}
+
+.colum1 h1{
+    font-size: 22px;
+}
+
+.colum1 p{
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+
+.colum2{
+    max-width: 400px;
+    
+}
+
+.colum2 h1{
+    font-size: 22px;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.row img{
+    width: 5.5vh;
+    height: 5.5vh;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.colum3{
+    max-width: 400px;
+}
+
+.colum3 h1{
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 5.5vh;
+    height: 5.5vh;
+}
+
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer{
+    width: 100%;  
+    background: #101010;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+
+
+.fabricaImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image1 image2"
+      "image3 image4"
+      "image5 image6";
+  }
+  
+  .image1 { grid-area: image1; }
+  
+  .image2 { grid-area: image2; }
+  
+  .image3 { grid-area: image3; }
+  
+  .image4 { grid-area: image4; }
+  
+  .image5 { grid-area: image5; }
+  
+  .image6 { grid-area: image6; }
+  
+  .fabricaImages{
+      justify-items: center;
+  }
+
+  .carousel{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+  }
+
+  /*Galería*/
+
+
+  .galería{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.columna{
+    flex:25%;
+    padding: 5px;
+}
+
+.imgGalería{
+    width: 100%;
+    margin-top: 5px;
+    transition: all 0.7s ease;
+    border-radius: 5%;
+}
+
+.imgGalería:hover{
+    transform: scale(1.1,1.1);
+}
+
+  /*Media queries*/
+
+@media screen and (max-width:663px) and (min-width:520px){
+    .columna{
+        flex:50%
+    }
+    header{
+        width:100%;
+    }
+    .fotosIndex{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+    }
+    .secciónNavegable{
+        width: 100%;
+        font-size:1rem;
+    }
+    .párrafo-index{
+        font-size: 15px;
+    }
+
+    .mapsResponsive{
+        width:100%;
+    }
+    .indumentariaResponsive{
+        width: 50%;
+    }
+    footer{
+        .colum1{
+            width: 100%;
+            margin: 3%;
+            font-size:16px;
+            h1{
+                font-size: 80%;
+            }
+        }
+        .colum2{
+            width: 100%;
+            margin: 3%;
+            font-size: 16px;
+            h1{
+                font-size: 80%;
+            }
+        }
+        .colum3{
+            width: 100%;
+            margin: 3%;
+            font-size: 16px;
+            h1{
+                font-size: 80%;
+            }
+        }
+        .párrafo-responsive{
+            font-size: 60%;
+        }
+    }  
+}
+
+
+
+@media screen and (max-width:519px) and (min-width:410px){
+    .columna{
+        flex:50%
+    }
+    header{
+        width:100%;
+    }
+    .fotosIndex{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+    }
+    .menu{
+        width: 100%;
+        font-size: 70%;
+    }
+    .párrafo-index{
+        font-size: 15px;
+    }
+
+    .mapsResponsive{
+        width:100%;
+    }
+    .indumentariaResponsive{
+        width: 50%;
+    }
+    footer{
+        .colum1{
+            width: 100%;
+            margin: 3%;
+            font-size:16px;
+            h1{
+                font-size: 80%;
+            }
+        }
+        .colum2{
+            width: 100%;
+            margin: 3%;
+            font-size: 16px;
+            h1{
+                font-size: 100%;
+            }
+        }
+        .colum3{
+            width: 100%;
+            margin: 3%;
+            font-size: 16px;
+            h1{
+                font-size: 80%;
+            }
+        }
+        .párrafo-responsive{
+            font-size: 50%;
+        }
+        a{
+            width: 15%;
+        }
+        .imgResponsive{
+            width: 21px;
+            height: 21px;
+        }
+    }  
+}
+@media screen and (max-width:409px) and (min-width:364px){
+    .columna{
+        flex:50%
+    }
+    header{
+        width:100%;
+    }
+    .fotosIndex{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+    }
+    .menu{
+        width: 100%;
+        font-size: 65%;
+    }
+    .secciónNavegable:hover{
+        transform: none;
+    }
+    .menu li a:hover {
+        background-color:coral;
+        color: rgb(90, 43, 9);
+    }
+    .párrafo-index{
+        font-size: 15px;
+    }
+
+    .mapsResponsive{
+        width:100%;
+    }
+    .indumentariaResponsive{
+        width: 50%;
+    }
+    footer{
+        .colum1{
+            width: 100%;
+            margin: 3%;
+            font-size:16px;
+            h1{
+                font-size: 80%;
+            }
+        }
+        .colum2{
+            width: 100%;
+            margin: 3%;
+            font-size: 16px;
+            h1{
+                font-size: 100%;
+            }
+        }
+        .colum3{
+            width: 100%;
+            margin: 1%;
+            font-size: 16px;
+            .imgResponsive{
+                width: 15%;
+            }
+            h1{
+                font-size: 80%;
+            }
+        }
+        .párrafo-responsive{
+            font-size: 53%;
+        }
+    } 
+    a{
+        width: 10%;
+    }
+    .imgResponsive{
+        width: 17%;
+        height: 17%;
+    }
+}
+
+@media screen and (max-width:363px) and (min-width:340px){
+    .columna{
+        flex:50%
+    }
+    header{
+        width:100%;
+    }
+    .fotosIndex{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+    .menu{
+        width: 100%;
+        font-size: 50%;
+    }
+    .secciónNavegable:hover{
+        transform: none;
+    }
+    .menu li a:hover {
+        background-color:coral;
+        color: rgb(90, 43, 9);
+    }
+    .párrafo-index{
+        font-size: 15px;
+    }
+
+    .mapsResponsive{
+        width:100%;
+    }
+    .indumentariaResponsive{
+        width: 50%;
+    }
+    footer{
+        width: 100%;
+        .colum1{
+            width: 100%;
+            margin: 2%;
+            font-size:15px;
+            h1{
+                font-size: 79%;
+            }
+        }
+        .colum2{
+            width: 100%;
+            margin: 2%;
+            font-size: 15px;
+            h1{
+                font-size: 100%;
+            }
+        }
+        .colum3{
+            width: 100%;
+            margin: 2%;
+            font-size: 15px;
+            h1{
+                font-size: 79%;
+            }
+        }
+        .párrafo-responsive{
+            font-size: 47%;
+        }
+    }  
+    a{
+        width: 15%;
+    }
+    .imgResponsive{
+        width: 17%;
+        height: 17%;
+    }
+}

@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.punaHeader {
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: black;
+}
+.imagesIndex{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-index{
+    background-color: coral;
+    opacity: .5;
+    padding: 0;
+    list-style: none;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+p{
+    font-family: 'Gochi Hand', cursive;
+    color: coral;
+}
+
+.secciónNavegable {
+    font-family: 'Gochi Hand', cursive;
+    color: rgb(90, 43, 9);
+    text-decoration: none;
+    list-style: none; 
+    display: inline-block;  
+    padding: 20px;
+    transition: all 0.7s ease;  
+    border-radius: 10%;
+}
+.secciónNavegable:hover{
+    transform: scale(1.3,1.3);
+}
+.menu li a:hover {
+    background-color: chocolate;
+    color: white;
+}
+
+.fotosIndex {
+    display: block;
+    margin: 68px;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    grid-area: main;
+}
+
+.footerFont{
+    font-family: 'Gochi Hand', cursive;
+    list-style: none;
+    color: rgb(165, 119, 34);
+    font-size: 25px;
+    padding: 15px;
+}
+
+.footerImg {
+    border-radius: 50%;
+    margin: 85%;
+    margin-top: 0%;
+}
+
+.contactoFont {
+    color: white;
+    font-family: 'Gochi Hand', cursive;
+    padding: 70px;
+    font-size: 25px;
+}
+
+.fabricaImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image1 image2"
+      "image3 image4"
+      "image5 image6";
+  }
+  
+  .image1 { grid-area: image1; }
+  
+  .image2 { grid-area: image2; }
+  
+  .image3 { grid-area: image3; }
+  
+  .image4 { grid-area: image4; }
+  
+  .image5 { grid-area: image5; }
+  
+  .image6 { grid-area: image6; }
+  
+  .fabricaImages{
+      justify-items: center;
+  }
+
+  .carousel{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+  }
+
+  /*Media queries*/
+  @media only screen and (max-width: 834px) and (min-width: 415px) {
+      body{
+          background-color: rgb(100, 94, 100);
+          font-size: 30px;
+      }
+      .menu{
+          background-color: white   ;
+      }
+      .secciónNavegable{
+            background-color:rgb(255, 255, 254);
+            display: flex;
+            flex-direction: column;
+      }
+      .fotosIndex{
+            display: grid;
+            justify-content: center;
+            margin: 45px;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+      }
+      .carousel{
+          flex-direction: row;
+          justify-content:left;
+      }
+
+      footer{
+          background-color: black;
+      }
+
+      @media (max-width: 414px){
+
+      }
+  }
+
+  
